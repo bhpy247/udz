@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Udaipur, Beyond the Ordinary | Udaipur Unfolded</title>
+  <meta name="description" content="Boutique travel discovery and residential homestay near Ambamata Temple, Udaipur, Rajasthan.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: '#F7F4ED',
+            sandSecondary: '#E9DFCF',
+            charcoal: '#252820',
+            terracotta: '#B56B4B',
+            terracottaDark: '#9E593A',
+            olive: '#777C61',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #F7F4ED; color: #252820; font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-sand text-charcoal antialiased">
+
+
+  <header id="main-header" class="bg-gradient-to-b from-[#181A14]/90 via-[#181A14]/60 to-transparent py-4 text-white absolute top-0 left-0 right-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="./index.html" class="group flex flex-col">
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-widest uppercase transition-colors text-white">
+            Udaipur Unfolded
+          </span>
+          <span class="text-[10px] tracking-[0.25em] uppercase font-sans -mt-1 hidden sm:block text-[#E9DFCF]/90">
+            Stay closer. Explore deeper.
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center space-x-7">
+          <a href="./index.html" class="text-sm font-medium tracking-wide relative py-1 transition-colors text-[#E49B7A] font-semibold">
+              Home
+              <span class="absolute bottom-0 left-0 right-0 h-0.5 rounded-full bg-[#E49B7A]"></span>
+            </a><a href="./stays.html" class="text-sm font-medium tracking-wide relative py-1 transition-colors text-white/90 hover:text-white">
+              Stays
+              
+            </a><a href="./hotels.html" class="text-sm font-medium tracking-wide relative py-1 transition-colors text-white/90 hover:text-white">
+              Hotels
+              
+            </a><a href="./places-to-visit.html" class="text-sm font-medium tracking-wide relative py-1 transition-colors text-white/90 hover:text-white">
+              Explore
+              
+            </a><a href="./itineraries.html" class="text-sm font-medium tracking-wide relative py-1 transition-colors text-white/90 hover:text-white">
+              Itineraries
+              
+            </a><a href="./experiences.html" class="text-sm font-medium tracking-wide relative py-1 transition-colors text-white/90 hover:text-white">
+              Experiences
+              
+            </a><a href="./about.html" class="text-sm font-medium tracking-wide relative py-1 transition-colors text-white/90 hover:text-white">
+              About
+              
+            </a>
+        </nav>
+
+        <!-- Right CTA Button -->
+        <div class="hidden sm:flex items-center space-x-3">
+          <a href="https://wa.me/919414000000?text=Hi!%20I%20would%20like%20to%20enquire%20about%20staying%20at%20Udaipur%20Unfolded." 
+             target="_blank" 
+             class="inline-flex items-center space-x-2 bg-terracotta hover:bg-terracottaDark text-white text-xs sm:text-sm font-medium px-4 py-2.5 shadow-md tracking-wider uppercase transition-all">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Enquire Now</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center space-x-2 lg:hidden">
+          <button id="mobile-toggle" class="p-2 transition-colors text-white" aria-label="Toggle menu">
+            <svg class="w-6 h-6 stroke-current fill-none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide Drawer -->
+    <div id="mobile-drawer" class="hidden fixed inset-0 z-50">
+      <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-sand shadow-2xl p-6 flex flex-col justify-between text-charcoal">
+        <div>
+          <div class="flex items-center justify-between pb-6 border-b border-sandSecondary">
+            <div>
+              <span class="font-serif text-lg font-bold text-charcoal uppercase tracking-wider">Udaipur Unfolded</span>
+              <p class="text-[11px] text-olive tracking-widest uppercase">Stay closer. Explore deeper.</p>
+            </div>
+            <button id="drawer-close" class="p-2 text-charcoal hover:text-terracotta">
+              <svg class="w-6 h-6 stroke-current fill-none" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <nav class="mt-8 flex flex-col space-y-4">
+            <a href="./index.html" class="text-lg font-serif tracking-wide py-2 border-b border-sandSecondary/50 flex items-center justify-between hover:text-terracotta">
+              <span>Home</span>
+              <span class="text-xs text-olive font-sans">→</span>
+            </a><a href="./stays.html" class="text-lg font-serif tracking-wide py-2 border-b border-sandSecondary/50 flex items-center justify-between hover:text-terracotta">
+              <span>Stays</span>
+              <span class="text-xs text-olive font-sans">→</span>
+            </a><a href="./hotels.html" class="text-lg font-serif tracking-wide py-2 border-b border-sandSecondary/50 flex items-center justify-between hover:text-terracotta">
+              <span>Hotels</span>
+              <span class="text-xs text-olive font-sans">→</span>
+            </a><a href="./places-to-visit.html" class="text-lg font-serif tracking-wide py-2 border-b border-sandSecondary/50 flex items-center justify-between hover:text-terracotta">
+              <span>Explore</span>
+              <span class="text-xs text-olive font-sans">→</span>
+            </a><a href="./itineraries.html" class="text-lg font-serif tracking-wide py-2 border-b border-sandSecondary/50 flex items-center justify-between hover:text-terracotta">
+              <span>Itineraries</span>
+              <span class="text-xs text-olive font-sans">→</span>
+            </a><a href="./experiences.html" class="text-lg font-serif tracking-wide py-2 border-b border-sandSecondary/50 flex items-center justify-between hover:text-terracotta">
+              <span>Experiences</span>
+              <span class="text-xs text-olive font-sans">→</span>
+            </a><a href="./about.html" class="text-lg font-serif tracking-wide py-2 border-b border-sandSecondary/50 flex items-center justify-between hover:text-terracotta">
+              <span>About</span>
+              <span class="text-xs text-olive font-sans">→</span>
+            </a>
+          </nav>
+        </div>
+        <div class="pt-6 border-t border-sandSecondary space-y-3">
+          <a href="https://wa.me/919414000000?text=Hi!%20I%20would%20like%20to%20enquire%20about%20staying%20at%20Udaipur%20Unfolded." 
+             target="_blank"
+             class="w-full inline-flex items-center justify-center space-x-2 bg-terracotta hover:bg-terracottaDark text-white py-3 font-medium uppercase text-xs tracking-widest">
+            <span>Enquire on WhatsApp</span>
+          </a>
+          <p class="text-[11px] text-center text-olive">Homestay near Ambamata Temple, Udaipur</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script>
+    const toggleBtn = document.getElementById('mobile-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const closeBtn = document.getElementById('drawer-close');
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => drawer.classList.remove('hidden'));
+      closeBtn && closeBtn.addEventListener('click', () => drawer.classList.add('hidden'));
+      backdrop && backdrop.addEventListener('click', () => drawer.classList.add('hidden'));
+    }
+  </script>
+
+
+<main class="flex-grow">
+  <!-- B. HERO SECTION -->
+  <section class="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-charcoal">
+    <div class="absolute inset-0 z-0">
+      <img src="images/hero-udaipur.jpg" alt="Udaipur City Palace and Lake Pichola at sunset" class="w-full h-full object-cover object-center opacity-65 brightness-95 filter contrast-105">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#181A14]/80 via-transparent to-[#252820]/95 pointer-events-none"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
+      <div class="inline-flex items-center space-x-2 bg-sand/15 backdrop-blur-md border border-sand/30 px-4 py-1.5 text-xs text-sand tracking-[0.25em] uppercase font-sans">
+        <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+        <span>Stay closer. Explore deeper.</span>
+      </div>
+
+      <div class="space-y-4">
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal tracking-wide leading-[1.15] drop-shadow-md">
+          Discover Udaipur, <br class="hidden sm:inline" />
+          <span class="italic font-light text-[#E49B7A]">beyond the ordinary.</span>
+        </h1>
+        <p class="text-sm sm:text-lg text-sand/90 max-w-2xl mx-auto font-light leading-relaxed tracking-wide drop-shadow-sm">
+          Find your stay. Discover hidden gems. Experience the city like a local.
+        </p>
+      </div>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="stays.html" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-terracotta hover:bg-terracottaDark text-white px-8 py-3.5 text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 shadow-lg active:scale-95">
+          <span>Explore Stays</span>
+          <span>→</span>
+        </a>
+        <a href="itineraries.html" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-sand/20 hover:bg-sand/30 text-white backdrop-blur-sm border border-sand/40 px-8 py-3.5 text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 active:scale-95">
+          <span>Plan Your Trip</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- C. INTRODUCTION -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sand border-b border-sandSecondary">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <span class="text-xs uppercase tracking-[0.25em] text-olive font-medium">Boutique Mewari Hospitality</span>
+      <h2 class="font-serif text-3xl sm:text-4xl text-charcoal font-normal">Your gateway to the City of Lakes.</h2>
+      <div class="w-12 h-0.5 bg-terracotta mx-auto"></div>
+      <p class="text-base sm:text-lg text-charcoal/80 leading-relaxed font-light">
+        Udaipur Unfolded was born from a family home situated near the sacred Ambamata Temple. We offer travelers an authentic residential stay alongside thoughtfully curated destination itineraries, vetted heritage hotels, and hidden cultural trails across the lake basin.
+      </p>
+    </div>
+  </section>
+
+  <!-- D. FEATURED ACCOMMODATION -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sandSecondary/30">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-sandSecondary pb-6">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-olive font-medium">Our Primary Inventory</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-charcoal font-normal mt-1">Featured Stays</h2>
+        </div>
+        <p class="text-sm text-olive mt-2 md:mt-0">Private rooms near Ambamata Temple • Under ₹2,000/night</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="bg-white border border-[#E0D7C7] overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
+          <div class="relative h-64 sm:h-72 w-full overflow-hidden">
+            <img src="images/room-1-main.jpg" alt="Room 1 — The Courtyard Haven" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-charcoal/80 text-sand text-[11px] uppercase tracking-widest px-3 py-1">Homestay Room</span>
+            <span class="absolute bottom-4 right-4 bg-terracotta text-white text-xs font-semibold px-3 py-1.5 shadow">₹1650 <span class="font-normal text-[10px]">/ night</span></span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-serif text-2xl text-charcoal font-normal">Room 1 — The Courtyard Haven</h3>
+              <p class="text-xs text-olive tracking-wider uppercase mt-0.5">undefined • Up to 2 Guests</p>
+              <p class="text-sm text-charcoal/80 mt-3 line-clamp-2">A bright, peaceful bedroom tucked into a tranquil residential neighborhood. Featuring hand-finished lime-plaster accents, a plush queen bed, and a quiet writing desk.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-sandSecondary">
+              <span class="text-[11px] bg-sand px-2.5 py-1 text-charcoal/80 border border-sandSecondary">High-Speed Wi-Fi (100 Mbps)</span><span class="text-[11px] bg-sand px-2.5 py-1 text-charcoal/80 border border-sandSecondary">Attached Private Bathroom</span><span class="text-[11px] bg-sand px-2.5 py-1 text-charcoal/80 border border-sandSecondary">24/7 Hot Water (Geyser)</span><span class="text-[11px] bg-sand px-2.5 py-1 text-charcoal/80 border border-sandSecondary">Air Conditioning & Ceiling Fan</span>
+            </div>
+            <div class="pt-4 flex items-center justify-between">
+              <a href="room-1.html" class="inline-flex items-center text-xs uppercase tracking-widest font-semibold text-terracotta hover:text-terracottaDark">
+                <span>View Details</span>
+                <span class="ml-1">→</span>
+              </a>
+              <a href="https://wa.me/919414000000?text=Hi!%20I%20am%20interested%20in%20booking%20Room%201%20%E2%80%94%20The%20Courtyard%20Haven%20at%20Udaipur%20Unfolded." target="_blank" class="inline-flex items-center space-x-1.5 text-xs bg-sand border border-[#DACBB7] px-3 py-2 text-charcoal hover:bg-sandSecondary transition-colors">
+                <span>Enquire via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white border border-[#E0D7C7] overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
+          <div class="relative h-64 sm:h-72 w-full overflow-hidden">
+            <img src="images/room-2-main.jpg" alt="Room 2 — The Amber Verandah Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-charcoal/80 text-sand text-[11px] uppercase tracking-widest px-3 py-1">Homestay Room</span>
+            <span class="absolute bottom-4 right-4 bg-terracotta text-white text-xs font-semibold px-3 py-1.5 shadow">₹1850 <span class="font-normal text-[10px]">/ night</span></span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-serif text-2xl text-charcoal font-normal">Room 2 — The Amber Verandah Room</h3>
+              <p class="text-xs text-olive tracking-wider uppercase mt-0.5">undefined • Up to 2 Guests</p>
+              <p class="text-sm text-charcoal/80 mt-3 line-clamp-2">Characterised by warm terracotta accents, natural stone flooring, and bespoke wood furnishings. Features dedicated balcony access overlooking leafy residential lanes.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-sandSecondary">
+              <span class="text-[11px] bg-sand px-2.5 py-1 text-charcoal/80 border border-sandSecondary">High-Speed Wi-Fi (100 Mbps)</span><span class="text-[11px] bg-sand px-2.5 py-1 text-charcoal/80 border border-sandSecondary">Attached Private Bathroom</span><span class="text-[11px] bg-sand px-2.5 py-1 text-charcoal/80 border border-sandSecondary">24/7 Hot Water Geyser</span><span class="text-[11px] bg-sand px-2.5 py-1 text-charcoal/80 border border-sandSecondary">Air Conditioning & Ceiling Fan</span>
+            </div>
+            <div class="pt-4 flex items-center justify-between">
+              <a href="room-2.html" class="inline-flex items-center text-xs uppercase tracking-widest font-semibold text-terracotta hover:text-terracottaDark">
+                <span>View Details</span>
+                <span class="ml-1">→</span>
+              </a>
+              <a href="https://wa.me/919414000000?text=Hi!%20I%20am%20interested%20in%20booking%20Room%202%20%E2%80%94%20The%20Amber%20Verandah%20Room%20at%20Udaipur%20Unfolded." target="_blank" class="inline-flex items-center space-x-1.5 text-xs bg-sand border border-[#DACBB7] px-3 py-2 text-charcoal hover:bg-sandSecondary transition-colors">
+                <span>Enquire via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- E. EXPLORE UDAIPUR -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sand">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-sandSecondary pb-6">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-olive font-medium">Curated City Guide</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-charcoal font-normal mt-1">Explore Udaipur</h2>
+        </div>
+        <a href="places-to-visit.html" class="text-xs uppercase tracking-widest text-terracotta font-semibold hover:underline mt-2 md:mt-0">View All 15 Destinations →</a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <a href="attractions/city-palace.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="images/city-palace.jpg" alt="City Palace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-widest px-2.5 py-1">Heritage</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-xl text-charcoal group-hover:text-terracotta transition-colors">City Palace</h3>
+              <p class="text-xs text-olive mt-1">2.5 – 3.5 Hours • Old City, Udaipur</p>
+              <p class="text-xs text-charcoal/80 mt-2 line-clamp-2">A monumental 400-year-old architectural marvel crowning the eastern bank of Lake Pichola.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-wider font-medium mt-4 inline-block">Read Visitor Guide →</span>
+          </div>
+        </a>
+        
+        <a href="attractions/lake-pichola.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="images/lake-pichola.jpg" alt="Lake Pichola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-widest px-2.5 py-1">Lake</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-xl text-charcoal group-hover:text-terracotta transition-colors">Lake Pichola</h3>
+              <p class="text-xs text-olive mt-1">1.5 – 2 Hours • Lake Pichola, Udaipur</p>
+              <p class="text-xs text-charcoal/80 mt-2 line-clamp-2">The picturesque heart of Udaipur, framed by Aravali hills, palaces, and historic ghats.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-wider font-medium mt-4 inline-block">Read Visitor Guide →</span>
+          </div>
+        </a>
+        
+        <a href="attractions/jagdish-temple.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="images/jagdish-temple.jpg" alt="Jagdish Temple" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-widest px-2.5 py-1">Temple</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-xl text-charcoal group-hover:text-terracotta transition-colors">Jagdish Temple</h3>
+              <p class="text-xs text-olive mt-1">45 Minutes • Jagdish Chowk, Old City</p>
+              <p class="text-xs text-charcoal/80 mt-2 line-clamp-2">An intricately carved 1651 AD Hindu temple dedicated to Lord Vishnu in the heart of the old city.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-wider font-medium mt-4 inline-block">Read Visitor Guide →</span>
+          </div>
+        </a>
+        
+        <a href="attractions/bagore-ki-haveli.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="images/bagore-ki-haveli.jpg" alt="Bagore Ki Haveli" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-widest px-2.5 py-1">Cultural</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-xl text-charcoal group-hover:text-terracotta transition-colors">Bagore Ki Haveli</h3>
+              <p class="text-xs text-olive mt-1">1 Hour (Museum) or 1.5 Hours (Evening Show) • Gangaur Ghat Marg, Udaipur</p>
+              <p class="text-xs text-charcoal/80 mt-2 line-clamp-2">18th-century noble haveli hosting museum exhibits and the famous Dharohar evening folk dance.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-wider font-medium mt-4 inline-block">Read Visitor Guide →</span>
+          </div>
+        </a>
+        
+        <a href="attractions/fateh-sagar-lake.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="images/fateh-sagar.jpg" alt="Fateh Sagar Lake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-widest px-2.5 py-1">Lake</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-xl text-charcoal group-hover:text-terracotta transition-colors">Fateh Sagar Lake</h3>
+              <p class="text-xs text-olive mt-1">1.5 – 2 Hours • North of Pichola, Udaipur</p>
+              <p class="text-xs text-charcoal/80 mt-2 line-clamp-2">Udaipur's favourite breezy water body, lined with scenic promenades, coffee stalls, and island parks.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-wider font-medium mt-4 inline-block">Read Visitor Guide →</span>
+          </div>
+        </a>
+        
+        <a href="attractions/saheliyon-ki-bari.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="images/saheliyon-ki-bari.jpg" alt="Saheliyon Ki Bari" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-widest px-2.5 py-1">Garden</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-xl text-charcoal group-hover:text-terracotta transition-colors">Saheliyon Ki Bari</h3>
+              <p class="text-xs text-olive mt-1">1 Hour • Saheli Marg, Udaipur</p>
+              <p class="text-xs text-charcoal/80 mt-2 line-clamp-2">The historic Garden of the Maidens featuring marble pavilions, lotus pools, and gravity-fed fountains.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-wider font-medium mt-4 inline-block">Read Visitor Guide →</span>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- F. CURATED ITINERARIES -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sandSecondary/20">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-sandSecondary pb-6">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-olive font-medium">Travel Plans</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-charcoal font-normal mt-1">Curated Itineraries</h2>
+        </div>
+        <a href="itineraries.html" class="text-xs uppercase tracking-widest text-terracotta font-semibold hover:underline mt-2 md:mt-0">View All 5 Itineraries →</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <a href="itineraries/one-day-udaipur.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-60 w-full overflow-hidden">
+            <img src="images/itinerary-1.jpg" alt="Udaipur in 1 Day — The Classic Heritage Circuit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-terracotta text-white text-[11px] font-semibold px-2.5 py-1">1 Day (8:30 AM – 9:00 PM)</span>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-2xl text-charcoal group-hover:text-terracotta transition-colors">Udaipur in 1 Day — The Classic Heritage Circuit</h3>
+              <p class="text-sm text-charcoal/80 mt-3 line-clamp-3">Designed for travellers with only 24 hours in the city. Covers the defining royal monuments, historic old town alleys, an ethereal sunset lake cruise, and evening cultural dance without rushing.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-widest font-semibold mt-6 inline-block">Explore Itinerary →</span>
+          </div>
+        </a>
+        
+        <a href="itineraries/two-day-udaipur.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-60 w-full overflow-hidden">
+            <img src="images/itinerary-2.jpg" alt="Udaipur in 2 Days — Lakes, Hills & Hidden Heritage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-terracotta text-white text-[11px] font-semibold px-2.5 py-1">2 Days / 1 Night</span>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-2xl text-charcoal group-hover:text-terracotta transition-colors">Udaipur in 2 Days — Lakes, Hills & Hidden Heritage</h3>
+              <p class="text-sm text-charcoal/80 mt-3 line-clamp-3">The ideal balance of historic landmarks on Day 1 and serene hilltop viewpoints, serene lakes, and tranquil royal gardens on Day 2.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-widest font-semibold mt-6 inline-block">Explore Itinerary →</span>
+          </div>
+        </a>
+        
+        <a href="itineraries/three-day-udaipur.html" class="group bg-white border border-[#E0D7C7] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+          <div class="relative h-60 w-full overflow-hidden">
+            <img src="images/itinerary-3.jpg" alt="Udaipur in 3 Days — The Immersive Cultural Explorer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-terracotta text-white text-[11px] font-semibold px-2.5 py-1">3 Days / 2 Nights</span>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif text-2xl text-charcoal group-hover:text-terracotta transition-colors">Udaipur in 3 Days — The Immersive Cultural Explorer</h3>
+              <p class="text-sm text-charcoal/80 mt-3 line-clamp-3">The complete Udaipur experience. Integrates royal history, artisan workshops, quiet nature walks at Lake Badi, tribal heritage at Shilpgram, and curated culinary experiences.</p>
+            </div>
+            <span class="text-xs text-terracotta uppercase tracking-widest font-semibold mt-6 inline-block">Explore Itinerary →</span>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- G. LOCAL EXPERIENCES -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sand">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs uppercase tracking-[0.25em] text-olive font-medium">Immerse Yourself</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal font-normal">Authentic Local Experiences</h2>
+        <div class="w-12 h-0.5 bg-terracotta mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="bg-white border border-[#E0D7C7] overflow-hidden group">
+          <div class="relative h-48 w-full overflow-hidden">
+            <img src="images/food-walk.jpg" alt="Authentic Mewari Food & Old Town Tasting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-wider px-2 py-0.5">Local Food</span>
+          </div>
+          <div class="p-5 space-y-2">
+            <h3 class="font-serif text-lg text-charcoal">Authentic Mewari Food & Old Town Tasting</h3>
+            <p class="text-xs text-olive">Old Town & Bada Bazaar • undefined</p>
+            <p class="text-xs text-charcoal/80">Explore the culinary soul of Udaipur through family-run kitchens that have cooked Mewari recipes for generations. Discover how the arid climate shaped the unique spices of Rajasthan, from smoky Ker Sangri to rich Kadhi and soft churma.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white border border-[#E0D7C7] overflow-hidden group">
+          <div class="relative h-48 w-full overflow-hidden">
+            <img src="images/rooftop-dining.jpg" alt="Twilight Rooftop Dining Overlooking Pichola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-wider px-2 py-0.5">Rooftop Dining</span>
+          </div>
+          <div class="p-5 space-y-2">
+            <h3 class="font-serif text-lg text-charcoal">Twilight Rooftop Dining Overlooking Pichola</h3>
+            <p class="text-xs text-olive">Chandpole & Hanuman Ghat waterfronts • undefined</p>
+            <p class="text-xs text-charcoal/80">Udaipur's rooftop culture is unmatched in India. We share our curated shortlist of non-touristy, honest rooftop spots where you can enjoy authentic food without paying exorbitant luxury surcharges.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white border border-[#E0D7C7] overflow-hidden group">
+          <div class="relative h-48 w-full overflow-hidden">
+            <img src="images/bagore-ki-haveli.jpg" alt="Artisans & Traditional Markets of Hathi Pol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-wider px-2 py-0.5">Traditional Markets</span>
+          </div>
+          <div class="p-5 space-y-2">
+            <h3 class="font-serif text-lg text-charcoal">Artisans & Traditional Markets of Hathi Pol</h3>
+            <p class="text-xs text-olive">Hathi Pol, Bada Bazaar & Mochiwada • undefined</p>
+            <p class="text-xs text-charcoal/80">Navigate the authentic bazaars with our insider pointers. Learn how to identify genuine vegetable-dyed block prints versus synthetic copies, and meet master artisans in their historic haveli studios.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white border border-[#E0D7C7] overflow-hidden group">
+          <div class="relative h-48 w-full overflow-hidden">
+            <img src="images/lake-pichola.jpg" alt="Sunset Boat Cruise on Lake Pichola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-wider px-2 py-0.5">Boat Rides</span>
+          </div>
+          <div class="p-5 space-y-2">
+            <h3 class="font-serif text-lg text-charcoal">Sunset Boat Cruise on Lake Pichola</h3>
+            <p class="text-xs text-olive">Lake Pichola (Rameshwar Ghat Jetty) • undefined</p>
+            <p class="text-xs text-charcoal/80">The quintessential Udaipur experience. Board from Rameshwar Ghat for a leisurely cruise around the historical islands, taking in the grand palaces as twilight turns the water into liquid gold.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white border border-[#E0D7C7] overflow-hidden group">
+          <div class="relative h-48 w-full overflow-hidden">
+            <img src="images/dharohar-dance.jpg" alt="Dharohar Rajasthani Folk Dance & Puppetry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-wider px-2 py-0.5">Cultural Experiences</span>
+          </div>
+          <div class="p-5 space-y-2">
+            <h3 class="font-serif text-lg text-charcoal">Dharohar Rajasthani Folk Dance & Puppetry</h3>
+            <p class="text-xs text-olive">Bagore Ki Haveli, Gangaur Ghat • undefined</p>
+            <p class="text-xs text-charcoal/80">Held every evening inside the central neem courtyard of Bagore Ki Haveli. Witness elderly masters balance eleven earthen pots on their heads while dancing atop shards of brass and glass.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white border border-[#E0D7C7] overflow-hidden group">
+          <div class="relative h-48 w-full overflow-hidden">
+            <img src="images/hero-udaipur.jpg" alt="Secret Ghats & Golden Hour Photography Trail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-charcoal/80 text-sand text-[10px] uppercase tracking-wider px-2 py-0.5">Photography</span>
+          </div>
+          <div class="p-5 space-y-2">
+            <h3 class="font-serif text-lg text-charcoal">Secret Ghats & Golden Hour Photography Trail</h3>
+            <p class="text-xs text-olive">Multiple locations across Udaipur • undefined</p>
+            <p class="text-xs text-charcoal/80">From the quiet steps of Ambrai Ghat at 6:00 AM to the Bahubali cliff edge at Badi Lake, we provide photography enthusiasts with precise GPS coordinates, best focal length advice, and lighting notes.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- H. WHY CHOOSE US -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sandSecondary/40 border-t border-sandSecondary">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] text-olive font-medium">The Udaipur Unfolded Difference</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal font-normal">Why Stay With Us?</h2>
+        <div class="w-12 h-0.5 bg-terracotta mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 border border-[#E0D7C7] space-y-3">
+          <span class="text-2xl text-terracotta">📍</span>
+          <h3 class="font-serif text-xl font-bold text-charcoal">Prime Residential Location</h3>
+          <p class="text-sm text-charcoal/80 leading-relaxed">Quiet, secure residential neighborhood right near Ambamata Temple. Just 5 minutes from Fateh Sagar Lake and 8 minutes from Lake Pichola ghats.</p>
+        </div>
+        <div class="bg-white p-8 border border-[#E0D7C7] space-y-3">
+          <span class="text-2xl text-terracotta">🏡</span>
+          <h3 class="font-serif text-xl font-bold text-charcoal">Authentic Homestay Comfort</h3>
+          <p class="text-sm text-charcoal/80 leading-relaxed">Two private, spacious rooms with dedicated workspace, air conditioning, and attached modern bathrooms. Fair pricing under ₹2,000/night.</p>
+        </div>
+        <div class="bg-white p-8 border border-[#E0D7C7] space-y-3">
+          <span class="text-2xl text-terracotta">💬</span>
+          <h3 class="font-serif text-xl font-bold text-charcoal">Personalized WhatsApp Care</h3>
+          <p class="text-sm text-charcoal/80 leading-relaxed">Direct WhatsApp coordination with your local hosts. Genuine assistance with daily timings, boat rentals, scooter hire, and hidden dining gems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="bg-charcoal text-sand pt-16 pb-12 border-t border-[#34382C] mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#34382C]">
+        <!-- Brand -->
+        <div class="md:col-span-2 space-y-4">
+          <a href="./index.html" class="inline-block">
+            <span class="font-serif text-2xl font-bold tracking-widest text-white uppercase">Udaipur Unfolded</span>
+            <span class="block text-xs tracking-[0.25em] text-[#DACBB7] uppercase font-sans mt-0.5">Stay closer. Explore deeper.</span>
+          </a>
+          <p class="text-sm text-[#DACBB7]/80 max-w-md leading-relaxed">
+            A boutique travel discovery brand and intimate residential homestay near Ambamata Temple, Udaipur. Connecting travelers with authentic Mewari hospitality, vetted stays, and local stories.
+          </p>
+          <div class="pt-2">
+            <span class="inline-flex items-center space-x-2 text-xs text-[#DACBB7] bg-[#34382C] px-3 py-1.5 border border-[#484D3E]">
+              <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+              <span>Primary homestay inventory: 2 Private Rooms near Ambamata Temple</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Stays & Links -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-base font-semibold text-white tracking-wider">Accommodation</h4>
+          <ul class="space-y-2 text-sm text-[#DACBB7]">
+            <li><a href="./room-1.html" class="hover:text-terracotta transition-colors">Room 1 — Deluxe Queen</a></li>
+            <li><a href="./room-2.html" class="hover:text-terracotta transition-colors">Room 2 — Mountain View</a></li>
+            <li><a href="./stays.html" class="hover:text-terracotta transition-colors">All Stays & Wings</a></li>
+            <li><a href="./hotels.html" class="hover:text-terracotta transition-colors">Partner Hotels Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Explore -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-base font-semibold text-white tracking-wider">Discovery</h4>
+          <ul class="space-y-2 text-sm text-[#DACBB7]">
+            <li><a href="./places-to-visit.html" class="hover:text-terracotta transition-colors">15 Places to Visit</a></li>
+            <li><a href="./itineraries.html" class="hover:text-terracotta transition-colors">Curated Itineraries</a></li>
+            <li><a href="./experiences.html" class="hover:text-terracotta transition-colors">Local Experiences</a></li>
+            <li><a href="./about.html" class="hover:text-terracotta transition-colors">About Our Homestay</a></li>
+            <li><a href="./contact.html" class="hover:text-terracotta transition-colors">Contact & Location</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#DACBB7]/70 space-y-4 sm:space-y-0">
+        <p>© 2026 Udaipur Unfolded. All rights reserved. Locally rooted hospitality.</p>
+        <div class="flex items-center space-x-6">
+          <a href="./privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="./terms.html" class="hover:text-white transition-colors">House Rules & Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
