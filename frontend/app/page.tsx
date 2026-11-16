@@ -39,10 +39,10 @@ export default function HomePage() {
             alt="Udaipur City Palace and Lake Pichola at sunset"
             fill
             priority
-            className="object-cover object-center opacity-45 brightness-90 filter contrast-105"
+            className="object-cover object-center opacity-60 brightness-95 filter contrast-105"
           />
-          {/* Subtle gradient to enhance text legibility and editorial feel */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#252820] via-[#252820]/40 to-transparent" />
+          {/* Top & bottom gradient overlays to guarantee perfect navigation & text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#181A14]/75 via-transparent to-[#252820]/90 pointer-events-none" />
         </div>
 
         {/* Hero Content Box */}

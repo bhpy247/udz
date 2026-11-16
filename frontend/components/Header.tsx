@@ -34,23 +34,35 @@ export default function Header() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
+  const isTransparent = pathname === "/" && !isScrolled;
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled
-            ? "bg-[#F7F4ED]/95 backdrop-blur-md shadow-sm border-b border-[#E9DFCF] py-3.5"
-            : "bg-transparent py-5"
+          isTransparent
+            ? "bg-gradient-to-b from-[#181A14]/90 via-[#181A14]/60 to-transparent py-4 text-white"
+            : "bg-[#F7F4ED]/98 backdrop-blur-md shadow-sm border-b border-[#E9DFCF] py-3.5 text-[#252820]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="group flex flex-col">
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-widest text-[#252820] uppercase group-hover:text-[#B56B4B] transition-colors">
+              <span
+                className={`font-serif text-xl sm:text-2xl font-bold tracking-widest uppercase transition-colors ${
+                  isTransparent
+                    ? "text-white group-hover:text-[#E49B7A] drop-shadow-md"
+                    : "text-[#252820] group-hover:text-[#B56B4B]"
+                }`}
+              >
                 Udaipur Unfolded
               </span>
-              <span className="text-[10px] tracking-[0.25em] text-[#777C61] uppercase font-sans -mt-1 hidden sm:block">
+              <span
+                className={`text-[10px] tracking-[0.25em] uppercase font-sans -mt-1 hidden sm:block ${
+                  isTransparent ? "text-[#E9DFCF]/90" : "text-[#777C61]"
+                }`}
+              >
                 Stay closer. Explore deeper.
               </span>
             </Link>
@@ -64,14 +76,22 @@ export default function Header() {
                     key={link.name}
                     href={link.href}
                     className={`text-sm font-medium transition-colors tracking-wide relative py-1 ${
-                      isActive
+                      isTransparent
+                        ? isActive
+                          ? "text-[#E49B7A] font-semibold"
+                          : "text-white/90 hover:text-white drop-shadow-sm"
+                        : isActive
                         ? "text-[#B56B4B] font-semibold"
                         : "text-[#252820] hover:text-[#B56B4B]"
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B56B4B] rounded-full" />
+                      <span
+                        className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full ${
+                          isTransparent ? "bg-[#E49B7A]" : "bg-[#B56B4B]"
+                        }`}
+                      />
                     )}
                   </Link>
                 );
@@ -82,7 +102,7 @@ export default function Header() {
             <div className="hidden sm:flex items-center space-x-3">
               <button
                 onClick={() => setIsEnquiryModalOpen(true)}
-                className="inline-flex items-center space-x-2 bg-[#B56B4B] hover:bg-[#9E593A] text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-none shadow-sm transition-all duration-200 tracking-wider uppercase active:scale-95"
+                className="inline-flex items-center space-x-2 bg-[#B56B4B] hover:bg-[#9E593A] text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-none shadow-md transition-all duration-200 tracking-wider uppercase active:scale-95"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Enquire Now</span>
@@ -100,7 +120,11 @@ export default function Header() {
               </button>
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2 text-[#252820] hover:text-[#B56B4B] transition-colors"
+                className={`p-2 transition-colors ${
+                  isTransparent
+                    ? "text-white hover:text-[#E49B7A]"
+                    : "text-[#252820] hover:text-[#B56B4B]"
+                }`}
                 aria-label="Open Navigation Menu"
               >
                 <Menu className="w-6 h-6" />
