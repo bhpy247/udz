@@ -56,7 +56,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5">
             <div className="relative h-[380px] sm:h-[460px] w-full bg-[#E9DFCF] border border-[#DACBB7] overflow-hidden shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
+                src="/images/lake-pichola.jpg"
                 alt="Udaipur heritage view across Lake Pichola"
                 fill
                 priority

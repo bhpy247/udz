@@ -18,17 +18,17 @@ export const roomsData: Room[] = [
     tagline: "Serene garden-facing private sanctuary near Ambamata Temple",
     description: "A bright, peaceful bedroom tucked into a tranquil residential neighborhood. Featuring hand-finished lime-plaster accents, a plush queen bed, and a quiet writing desk.",
     longDescription: "Room 1 is one of two private guest rooms hosted inside our residential home in the tranquil Ambamata neighbourhood. Located just 7 minutes from Lake Pichola and Fateh Sagar, this room offers an authentic, quiet Udaipur stay away from chaotic tourist traffic while remaining effortlessly central.\n\nThe room features abundant morning light, an attached private bathroom with 24/7 hot water, high-speed Wi-Fi, and access to a breezy ground floor verandah shaded by neem and bougainvillea. Ideal for solo explorers, remote creatives, and couples seeking respectful, genuine local hospitality.",
-    pricePerNight: 1650, // Below ₹2,000/night
+    pricePerNight: 1650,
     maxGuests: 2,
     bedConfig: "1 Queen-size Bed with orthopedic mattress",
     roomSize: "220 sq. ft.",
     checkIn: "1:00 PM",
     checkOut: "11:00 AM",
     images: [
-      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"
+      "/images/room-1-main.jpg",
+      "/images/room-1-thumb-1.jpg",
+      "/images/room-1-thumb-2.jpg",
+      "/images/room-1-thumb-3.jpg"
     ],
     amenities: [
       "High-Speed Wi-Fi (100 Mbps)",
@@ -60,17 +60,17 @@ export const roomsData: Room[] = [
     tagline: "Airy heritage-toned private room with private sit-out corner",
     description: "Characterised by warm terracotta accents, natural stone flooring, and bespoke wood furnishings. Features dedicated balcony access overlooking leafy residential lanes.",
     longDescription: "Room 2 is our second private guest accommodation, curated with warmth and traditional Rajasthani craftsmanship. Fitted with natural stone floors that remain naturally cool during warm afternoons and large bay windows, it is designed for travellers who value authentic living over generic hotel corridors.\n\nEnjoy fresh morning chai on the adjoining sit-out area, plan your city walks with our personal maps, and experience the warmth of a local Udaipur home.",
-    pricePerNight: 1850, // Below ₹2,000/night
+    pricePerNight: 1850,
     maxGuests: 2,
     bedConfig: "1 Queen-size Bed or 2 Twin Bed configuration upon advance request",
     roomSize: "240 sq. ft.",
     checkIn: "1:00 PM",
     checkOut: "11:00 AM",
     images: [
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1540518614846-7ede433c4ef4?auto=format&fit=crop&w=1200&q=80"
+      "/images/room-2-main.jpg",
+      "/images/room-2-thumb-1.jpg",
+      "/images/room-2-thumb-2.jpg",
+      "/images/room-2-thumb-3.jpg"
     ],
     amenities: [
       "High-Speed Wi-Fi (100 Mbps)",
@@ -105,10 +105,10 @@ export const attractionsData: Attraction[] = [
     category: "Heritage",
     shortDescription: "A monumental 400-year-old architectural marvel crowning the eastern bank of Lake Pichola.",
     fullDescription: "Built over nearly four centuries by successive Maharanas of Mewar starting with Maharana Udai Singh II in 1559, the City Palace complex is a breathtaking fusion of Rajasthani and Mughal architectural styles. Towering over Lake Pichola with majestic granite and marble facades, it houses courtyards, pavilions, terraces, corridors, and hanging gardens.",
-    heroImage: "https://images.unsplash.com/photo-1605649487212-47bdab064df8?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/city-palace.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&w=1200&q=80"
+      "/images/city-palace.jpg",
+      "/images/lake-pichola.jpg"
     ],
     location: "Old City, Udaipur",
     estimatedDuration: "2.5 – 3.5 Hours",
@@ -127,9 +127,10 @@ export const attractionsData: Attraction[] = [
     category: "Lake",
     shortDescription: "The picturesque heart of Udaipur, framed by Aravali hills, palaces, and historic ghats.",
     fullDescription: "An artificial freshwater lake created in 1362 AD by a Banjara tribesman and later expanded by Maharana Udai Singh II. Pichola is world-renowned for its shimmering waters reflecting the Jag Mandir Island Palace, Lake Palace (Taj), and majestic City Palace ghats at golden hour.",
-    heroImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/lake-pichola.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=80"
+      "/images/lake-pichola.jpg",
+      "/images/ambrai-ghat.jpg"
     ],
     location: "Lake Pichola, Udaipur",
     estimatedDuration: "1.5 – 2 Hours",
@@ -148,9 +149,9 @@ export const attractionsData: Attraction[] = [
     category: "Temple",
     shortDescription: "An intricately carved 1651 AD Hindu temple dedicated to Lord Vishnu in the heart of the old city.",
     fullDescription: "Commissioned by Maharana Jagat Singh I in 1651, Jagdish Temple stands atop an elevated plinth with an imposing 79-foot spire. Carved entirely from yellow-sandstone with tiers of elephants, horsemen, dancers, and musicians, it remains an active centre of local devotional life with resonant morning and evening aartis.",
-    heroImage: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/jagdish-temple.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1605649487212-47bdab064df8?auto=format&fit=crop&w=1200&q=80"
+      "/images/jagdish-temple.jpg"
     ],
     location: "Jagdish Chowk, Old City",
     estimatedDuration: "45 Minutes",
@@ -169,9 +170,10 @@ export const attractionsData: Attraction[] = [
     category: "Cultural",
     shortDescription: "18th-century noble haveli hosting museum exhibits and the famous Dharohar evening folk dance.",
     fullDescription: "Built right at Gangaur Ghat on Lake Pichola by Amar Chand Badwa, Prime Minister of Mewar, in the 18th century. Featuring 138 rooms with balconies, jharokhas, and colored glass windows. Every evening at 7:00 PM, the courtyards come alive with the legendary Dharohar Rajasthani folk dance and puppet show.",
-    heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/bagore-ki-haveli.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
+      "/images/bagore-ki-haveli.jpg",
+      "/images/dharohar-dance.jpg"
     ],
     location: "Gangaur Ghat Marg, Udaipur",
     estimatedDuration: "1 Hour (Museum) or 1.5 Hours (Evening Show)",
@@ -190,9 +192,9 @@ export const attractionsData: Attraction[] = [
     category: "Lake",
     shortDescription: "Udaipur's favourite breezy water body, lined with scenic promenades, coffee stalls, and island parks.",
     fullDescription: "Constructed in 1687 by Maharana Jai Singh and later remodeled by Maharana Fateh Singh. A beloved social gathering spot for locals, Fateh Sagar is famous for morning joggers on Rani Road, motorboating to Nehru Park island, and evening coffee by 'Mumbai Market' along the lake promenade.",
-    heroImage: "https://images.unsplash.com/photo-1622303046736-22467d307a50?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/fateh-sagar.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=80"
+      "/images/fateh-sagar.jpg"
     ],
     location: "North of Pichola, Udaipur",
     estimatedDuration: "1.5 – 2 Hours",
@@ -211,9 +213,9 @@ export const attractionsData: Attraction[] = [
     category: "Garden",
     shortDescription: "The historic Garden of the Maidens featuring marble pavilions, lotus pools, and gravity-fed fountains.",
     fullDescription: "Laid out by Maharana Sangram Singh II in the 18th century for a royal princess and her forty-eight maidens. The garden is famous for its natural gravity-driven brass fountains supplied directly by Fateh Sagar Lake without electric motors, fragrant frangipani blossoms, and elephant fountain sculptures.",
-    heroImage: "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/saheliyon-ki-bari.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1605649487212-47bdab064df8?auto=format&fit=crop&w=1200&q=80"
+      "/images/saheliyon-ki-bari.jpg"
     ],
     location: "Saheli Marg, Udaipur",
     estimatedDuration: "1 Hour",
@@ -232,9 +234,9 @@ export const attractionsData: Attraction[] = [
     category: "Viewpoint",
     shortDescription: "A hilltop fortress 3,100 feet above sea level offering dramatic 360-degree sunset panoramas.",
     fullDescription: "Perched high atop Bansdara mountain overlooking the entire city and surrounding Aravali range. Built by Maharana Sajjan Singh in 1884 as an astronomical centre and monsoon retreat to watch rain clouds roll across the plains. Famous for its golden sunset vantage points.",
-    heroImage: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/sajjangarh.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
+      "/images/sajjangarh.jpg"
     ],
     location: "Bansdara Peak, Sajjangarh Wildlife Sanctuary",
     estimatedDuration: "2 Hours",
@@ -253,9 +255,9 @@ export const attractionsData: Attraction[] = [
     category: "Lake",
     shortDescription: "The premiere vantage point opposite the City Palace across the calm waters of Lake Pichola.",
     fullDescription: "Located at the western shore of Lake Pichola directly facing the illuminated facades of the City Palace, Lake Palace, and Gangaur Ghat. A peaceful stone ghat where travellers and locals sit quietly to listen to the gentle lap of the water and watch twilight embrace the old city.",
-    heroImage: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/ambrai-ghat.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
+      "/images/ambrai-ghat.jpg"
     ],
     location: "Hanuman Ghat Marg, Outside Chandpole, Udaipur",
     estimatedDuration: "1 Hour",
@@ -274,9 +276,9 @@ export const attractionsData: Attraction[] = [
     category: "Heritage",
     shortDescription: "Vibrant historic stepped ghat on Pichola, central to Udaipur's religious festivities.",
     fullDescription: "The most iconic bathing and ceremonial ghat on the eastern shore of Lake Pichola, right behind Bagore Ki Haveli. Site of colourful festivities during the annual Gangaur and Mewar festivals, and a beloved backdrop for photographers throughout the year.",
-    heroImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/lake-pichola.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
+      "/images/lake-pichola.jpg"
     ],
     location: "Old City, near Jagdish Chowk",
     estimatedDuration: "45 Minutes",
@@ -295,9 +297,9 @@ export const attractionsData: Attraction[] = [
     category: "Cultural",
     shortDescription: "A living rural arts and crafts complex depicting traditional tribal and village life of Western India.",
     fullDescription: "Spanning 70 acres in the foothills of the Aravalis west of Udaipur, Shilpgram features authentic traditional huts and workshops representing the distinct vernacular architecture of Rajasthan, Gujarat, Goa, and Maharashtra. A haven for folk arts, terracotta potters, weaving, and live performances.",
-    heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/shilpgram.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+      "/images/shilpgram.jpg"
     ],
     location: "Near Haveli, Shilpgram Road, Udaipur",
     estimatedDuration: "2 Hours",
@@ -316,9 +318,9 @@ export const attractionsData: Attraction[] = [
     category: "Lake",
     shortDescription: "An unhurried, pristine freshwater lake famous for the scenic Bahubali Hill trek and stillness.",
     fullDescription: "Built by Maharana Raj Singh I in 1680 to counter devastating drought in village Badi. Unlike Pichola and Fateh Sagar, Badi Lake has no commercial buildings or shops along its pristine banks, making it a peaceful escape. The short 15-minute hike up Bahubali Peak yields one of the finest wild vistas in Rajasthan.",
-    heroImage: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/badi-lake.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "/images/badi-lake.jpg"
     ],
     location: "12 km West of Udaipur city",
     estimatedDuration: "2.5 Hours including drive",
@@ -337,9 +339,9 @@ export const attractionsData: Attraction[] = [
     category: "Lake",
     shortDescription: "A small picturesque lake adjacent to Pichola with musical rock gardens and sunset views.",
     fullDescription: "Located directly beside Lake Pichola near the southern foot of Machla Magra hill. Doodh Talai features the Manikya Lal Verma Garden and is the boarding station for the ropeway up to Karni Mata Temple.",
-    heroImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/lake-pichola.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=80"
+      "/images/lake-pichola.jpg"
     ],
     location: "Southern end of Pichola, Udaipur",
     estimatedDuration: "1 Hour",
@@ -358,9 +360,9 @@ export const attractionsData: Attraction[] = [
     category: "Viewpoint",
     shortDescription: "Scenic cable car ascent to Machla Magra hill for dramatic panoramic views of the lake basin.",
     fullDescription: "A modern cable car connecting Doodh Talai with the elevated Karni Mata shrine atop Machla Magra. The 5-minute ride glides over forested slopes, rewarding passengers with sweeping views across Lake Pichola, the City Palace, and Jag Mandir Island.",
-    heroImage: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/sajjangarh.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
+      "/images/sajjangarh.jpg"
     ],
     location: "Doodh Talai, Udaipur",
     estimatedDuration: "1.5 Hours",
@@ -379,9 +381,9 @@ export const attractionsData: Attraction[] = [
     category: "Garden",
     shortDescription: "100-acre historic botanical garden established in 1881 with heritage library and rose varieties.",
     fullDescription: "Commissioned by Maharana Sajjan Singh in 1881, Gulab Bagh (Rose Garden) is the largest historic garden in Udaipur. It contains a heritage library with rare manuscripts, century-old banyan trees, and shaded walking avenues.",
-    heroImage: "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/saheliyon-ki-bari.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1605649487212-47bdab064df8?auto=format&fit=crop&w=1200&q=80"
+      "/images/saheliyon-ki-bari.jpg"
     ],
     location: "Gulab Bagh Road, Udaipur",
     estimatedDuration: "1 Hour",
@@ -400,9 +402,9 @@ export const attractionsData: Attraction[] = [
     category: "Heritage",
     shortDescription: "Private collection of royal Rolls-Royces, Cadillacs, and classic convertibles belonging to Mewar royals.",
     fullDescription: "Housed in the historic Mewar State Motor Garage, this museum showcases rare preserved vintage automobiles including the 1934 Rolls-Royce Phantom II featured in the James Bond movie Octopussy, 1938 Cadillacs, and classic Austin models.",
-    heroImage: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/city-palace.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80"
+      "/images/city-palace.jpg"
     ],
     location: "Gulab Bagh Road, Brahmpuri, Udaipur",
     estimatedDuration: "45 Minutes",
@@ -422,7 +424,7 @@ export const itinerariesData: Itinerary[] = [
     title: "Udaipur in 1 Day — The Classic Heritage Circuit",
     duration: "1 Day (8:30 AM – 9:00 PM)",
     targetAudience: "Essential",
-    coverImage: "https://images.unsplash.com/photo-1605649487212-47bdab064df8?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/itinerary-1.jpg",
     overview: "Designed for travellers with only 24 hours in the city. Covers the defining royal monuments, historic old town alleys, an ethereal sunset lake cruise, and evening cultural dance without rushing.",
     travelTips: [
       "Start early at Jagdish Temple before the City Palace queues open at 9:30 AM",
@@ -500,7 +502,7 @@ export const itinerariesData: Itinerary[] = [
     title: "Udaipur in 2 Days — Lakes, Hills & Hidden Heritage",
     duration: "2 Days / 1 Night",
     targetAudience: "Essential",
-    coverImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/itinerary-2.jpg",
     overview: "The ideal balance of historic landmarks on Day 1 and serene hilltop viewpoints, serene lakes, and tranquil royal gardens on Day 2.",
     travelTips: [
       "Rent a local auto-rickshaw or scooter for Day 2 exploration toward Fateh Sagar and Sajjangarh",
@@ -586,7 +588,7 @@ export const itinerariesData: Itinerary[] = [
     title: "Udaipur in 3 Days — The Immersive Cultural Explorer",
     duration: "3 Days / 2 Nights",
     targetAudience: "Slow Travel",
-    coverImage: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/itinerary-3.jpg",
     overview: "The complete Udaipur experience. Integrates royal history, artisan workshops, quiet nature walks at Lake Badi, tribal heritage at Shilpgram, and curated culinary experiences.",
     travelTips: [
       "Dedicate Day 3 morning to the peaceful sunrise hike at Badi Lake",
@@ -687,7 +689,7 @@ export const itinerariesData: Itinerary[] = [
     title: "Romantic Udaipur — Sunset Waters & Candlelit Rooftops",
     duration: "2 to 3 Days",
     targetAudience: "Couples",
-    coverImage: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/lake-pichola.jpg",
     overview: "Tailored for slow, intimate exploration. Emphasises private ghat vantage points, quiet boat charters, atmospheric heritage dining, and tranquil morning walks.",
     travelTips: [
       "Opt for private boat hire at Lake Pichola around 5:15 PM for golden light photos",
@@ -735,7 +737,7 @@ export const itinerariesData: Itinerary[] = [
     title: "Family Udaipur Explorer — Palaces, Gardens & Cable Cars",
     duration: "2 to 3 Days",
     targetAudience: "Families",
-    coverImage: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/shilpgram.jpg",
     overview: "Curated with manageable walking distances, interactive experiences for all generations, playful garden stops, ropeway rides, and family-friendly dining.",
     travelTips: [
       "Break visits into morning and late afternoon sessions to avoid mid-day fatigue",
@@ -791,8 +793,8 @@ export const hotelsData: Hotel[] = [
     shortDescription: "Our signature two private guest rooms hosted in a peaceful residential home. Authentic local hospitality, quiet nights, and fast Wi-Fi.",
     amenities: ["Free Wi-Fi", "Air Conditioning", "24/7 Hot Water", "Verandah Access", "Daily Housekeeping", "Personal Local Guide"],
     photos: [
-      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80"
+      "/images/room-1-main.jpg",
+      "/images/room-2-main.jpg"
     ]
   },
   {
@@ -806,8 +808,7 @@ export const hotelsData: Hotel[] = [
     shortDescription: "A carefully restored 180-year-old family haveli featuring traditional Mewari arches, courtyard seating, and rooftop lake vistas.",
     amenities: ["Rooftop Restaurant", "Lake Views", "Wi-Fi", "Heritage Courtyard", "Room Service"],
     photos: [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+      "/images/hotel-partner-1.jpg"
     ],
     commissionNotePrivate: "Verified partner with 10% direct booking referral agreement."
   },
@@ -822,7 +823,7 @@ export const hotelsData: Hotel[] = [
     shortDescription: "Comfortable boutique hotel steps from the Fateh Sagar walkway. Great for morning walks, quiet stays, and family travellers.",
     amenities: ["Lake Proximity", "Breakfast Included", "Free Wi-Fi", "Parking", "Elevator"],
     photos: [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80"
+      "/images/hotel-partner-2.jpg"
     ],
     commissionNotePrivate: "Direct owner liaison, verified cleanliness standards."
   },
@@ -837,7 +838,7 @@ export const hotelsData: Hotel[] = [
     shortDescription: "Independent boutique heritage property offering uninterrupted vistas of the Lake Palace and Gangaur Ghat.",
     amenities: ["Waterfront Dining", "Sunset Terrace", "Wi-Fi", "Tour Desk"],
     photos: [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
+      "/images/ambrai-ghat.jpg"
     ]
   },
   {
@@ -851,7 +852,7 @@ export const hotelsData: Hotel[] = [
     shortDescription: "Expansive luxury property surrounded by rugged hills. Features swimming pools, lush gardens, and secluded suites.",
     amenities: ["Swimming Pool", "Spa Services", "Mountain Views", "Multi-Cuisine Dining", "Private Balconies"],
     photos: [
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+      "/images/badi-lake.jpg"
     ]
   }
 ];
@@ -865,7 +866,7 @@ export const experiencesData: Experience[] = [
     shortDescription: "Savour authentic Dal Baati Churma cooked with desi ghee, spicy Mirchi Vadas, and authentic local sweets.",
     description: "Explore the culinary soul of Udaipur through family-run kitchens that have cooked Mewari recipes for generations. Discover how the arid climate shaped the unique spices of Rajasthan, from smoky Ker Sangri to rich Kadhi and soft churma.",
     location: "Old Town & Bada Bazaar",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/food-walk.jpg",
     verifiedStatus: "Locally curated recommendation"
   },
   {
@@ -876,7 +877,7 @@ export const experiencesData: Experience[] = [
     shortDescription: "Watch the City Palace illuminate across the calm water as you enjoy dinner with gentle acoustic sitar melodies.",
     description: "Udaipur's rooftop culture is unmatched in India. We share our curated shortlist of non-touristy, honest rooftop spots where you can enjoy authentic food without paying exorbitant luxury surcharges.",
     location: "Chandpole & Hanuman Ghat waterfronts",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/rooftop-dining.jpg",
     verifiedStatus: "Curated local guide"
   },
   {
@@ -887,7 +888,7 @@ export const experiencesData: Experience[] = [
     shortDescription: "Discover authentic Bandhani textiles, traditional Mojri leather shoes, and miniature Pichwai artwork.",
     description: "Navigate the authentic bazaars with our insider pointers. Learn how to identify genuine vegetable-dyed block prints versus synthetic copies, and meet master artisans in their historic haveli studios.",
     location: "Hathi Pol, Bada Bazaar & Mochiwada",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/bagore-ki-haveli.jpg",
     verifiedStatus: "Direct artisan network"
   },
   {
@@ -898,7 +899,7 @@ export const experiencesData: Experience[] = [
     shortDescription: "A gentle 45-minute cruise providing postcard perspectives of the Jag Mandir and the City Palace facade.",
     description: "The quintessential Udaipur experience. Board from Rameshwar Ghat for a leisurely cruise around the historical islands, taking in the grand palaces as twilight turns the water into liquid gold.",
     location: "Lake Pichola (Rameshwar Ghat Jetty)",
-    image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/lake-pichola.jpg",
     verifiedStatus: "Municipal & official jetty operations"
   },
   {
@@ -909,7 +910,7 @@ export const experiencesData: Experience[] = [
     shortDescription: "High-energy live performance of Chari dance, Terah Taali, and traditional Mewari music inside a historic haveli.",
     description: "Held every evening inside the central neem courtyard of Bagore Ki Haveli. Witness elderly masters balance eleven earthen pots on their heads while dancing atop shards of brass and glass.",
     location: "Bagore Ki Haveli, Gangaur Ghat",
-    image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/dharohar-dance.jpg",
     verifiedStatus: "Historic cultural institution"
   },
   {
@@ -920,7 +921,7 @@ export const experiencesData: Experience[] = [
     shortDescription: "Our personal field map of sunrise and sunset vantage points without crowds.",
     description: "From the quiet steps of Ambrai Ghat at 6:00 AM to the Bahubali cliff edge at Badi Lake, we provide photography enthusiasts with precise GPS coordinates, best focal length advice, and lighting notes.",
     location: "Multiple locations across Udaipur",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df8?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/hero-udaipur.jpg",
     verifiedStatus: "Curated by Udaipur Unfolded"
   }
 ];

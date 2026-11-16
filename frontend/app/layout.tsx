@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Udaipur Unfolded",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1605649487212-47bdab064df8?auto=format&fit=crop&w=1200&q=80",
+        url: "/images/hero-udaipur.jpg",
         width: 1200,
         height: 630,
         alt: "Udaipur City Palace and Lake Pichola at sunset",

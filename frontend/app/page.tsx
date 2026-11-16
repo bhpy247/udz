@@ -35,7 +35,7 @@ export default function HomePage() {
         {/* Cinematic Backdrop Image with Dark Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1605649487212-47bdab064df8?auto=format&fit=crop&w=2000&q=85"
+            src="/images/hero-udaipur.jpg"
             alt="Udaipur City Palace and Lake Pichola at sunset"
             fill
             priority
