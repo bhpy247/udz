@@ -1,0 +1,225 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("ADMIN") // ADMIN, OWNER, STAFF
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("admin_users")
+}
+
+model Property {
+  id              String   @id @default(uuid())
+  slug            String   @unique
+  name            String
+  description     String?
+  addressNote     String   // e.g. "Residential property near Ambamata Temple"
+  city            String   @default("Udaipur")
+  state           String   @default("Rajasthan")
+  pincode         String   @default("313001")
+  isResidential   Boolean  @default(true)
+  whatsappContact String   @default("919414000000")
+  rooms           Room[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("properties")
+}
+
+model Room {
+  id                   String             @id @default(uuid())
+  propertyId           String
+  property             Property           @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  slug                 String             @unique
+  name                 String
+  tagline              String
+  description          String
+  longDescription      String
+  pricePerNight        Int                // Below 2000 initial business pricing
+  maxGuests            Int                @default(2)
+  bedConfig            String
+  roomSize             String
+  checkIn              String             @default("1:00 PM")
+  checkOut             String             @default("11:00 AM")
+  images               String[]           // URLs
+  amenities            String[]           // Array of amenities
+  houseRules           String[]           // Array of rules
+  cancellationPolicy   String
+  isAvailable          Boolean            @default(true)
+  propertyLocationNote String
+  availabilities       RoomAvailability[]
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+
+  @@map("rooms")
+}
+
+model RoomAvailability {
+  id          String   @id @default(uuid())
+  roomId      String
+  room        Room     @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  date        DateTime
+  isBlocked   Boolean  @default(false)
+  customPrice Int?
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([roomId, date])
+  @@map("room_availabilities")
+}
+
+model Hotel {
+  id                    String   @id @default(uuid())
+  slug                  String   @unique
+  name                  String
+  category              String   // "Budget stays", "Mid-range hotels", "Heritage hotels", "Premium hotels"
+  partnershipType       String   // "Our own accommodation", "Verified partner property", "Recommended third-party"
+  indicativePriceRange  String
+  location              String
+  shortDescription      String
+  amenities             String[]
+  photos                String[]
+  commissionNotePrivate String?  // Stored privately for admin eyes only
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  @@map("hotels")
+}
+
+model Attraction {
+  id                   String   @id @default(uuid())
+  slug                 String   @unique
+  name                 String
+  hindiName            String?
+  category             String   // "Heritage", "Lake", "Temple", "Garden", "Viewpoint", "Cultural"
+  shortDescription     String
+  fullDescription      String
+  heroImage            String
+  gallery              String[]
+  location             String
+  estimatedDuration    String
+  suggestedTiming      String
+  verifiedEntryFee     String?
+  verifiedOpeningHours String?
+  nearbyAttractions    String[]
+  googleMapsUrl        String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@map("attractions")
+}
+
+model Itinerary {
+  id                     String         @id @default(uuid())
+  slug                   String         @unique
+  title                  String
+  duration               String
+  targetAudience         String         // "Essential", "Couples", "Families", "Slow Travel"
+  coverImage             String
+  overview               String
+  travelTips             String[]
+  recommendedStayRoomSlug String?
+  days                   ItineraryDay[]
+  createdAt              DateTime       @default(now())
+  updatedAt              DateTime       @updatedAt
+
+  @@map("itineraries")
+}
+
+model ItineraryDay {
+  id          String          @id @default(uuid())
+  itineraryId String
+  itinerary   Itinerary       @relation(fields: [itineraryId], references: [id], onDelete: Cascade)
+  dayNumber   Int
+  dayTitle    String
+  theme       String
+  stops       ItineraryStop[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  @@map("itinerary_days")
+}
+
+model ItineraryStop {
+  id              String       @id @default(uuid())
+  dayId           String
+  day             ItineraryDay @relation(fields: [dayId], references: [id], onDelete: Cascade)
+  stopOrder       Int          @default(1)
+  timeSlot        String
+  destinationName String
+  destinationSlug String?
+  description     String
+  tips            String?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@map("itinerary_stops")
+}
+
+model Experience {
+  id                  String   @id @default(uuid())
+  slug                String   @unique
+  title               String
+  category            String   // "Local Food", "Rooftop Dining", "Traditional Markets", "Boat Rides", "Cultural Experiences", "Photography"
+  shortDescription    String
+  description         String
+  location            String
+  image               String
+  externalEnquiryLink String?
+  verifiedStatus      String
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@map("experiences")
+}
+
+model Enquiry {
+  id           String        @id @default(uuid())
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  guestName    String
+  guestPhone   String
+  guestEmail   String?
+  roomSlug     String
+  checkInDate  String
+  checkOutDate String
+  guestCount   Int           @default(2)
+  status       String        @default("New") // "New", "Contacted", "Confirmed", "Cancelled", "Completed"
+  notes        String?
+  enquiryNotes EnquiryNote[]
+
+  @@map("enquiries")
+}
+
+model EnquiryNote {
+  id         String   @id @default(uuid())
+  enquiryId  String
+  enquiry    Enquiry  @relation(fields: [enquiryId], references: [id], onDelete: Cascade)
+  authorName String
+  content    String
+  createdAt  DateTime @default(now())
+
+  @@map("enquiry_notes")
+}
+
+model SiteSetting {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String
+  description String?
+  updatedAt   DateTime @updatedAt
+
+  @@map("site_settings")
+}
