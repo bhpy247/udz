@@ -108,6 +108,7 @@ export const attractionsData: Attraction[] = [
     heroImage: "/images/city-palace.jpg",
     gallery: [
       "/images/city-palace.jpg",
+      "/images/city-palace-boat.jpg",
       "/images/lake-pichola.jpg"
     ],
     location: "Old City, Udaipur",
@@ -130,6 +131,7 @@ export const attractionsData: Attraction[] = [
     heroImage: "/images/lake-pichola.jpg",
     gallery: [
       "/images/lake-pichola.jpg",
+      "/images/lake-pichola-aerial.jpg",
       "/images/ambrai-ghat.jpg"
     ],
     location: "Lake Pichola, Udaipur",
@@ -236,7 +238,8 @@ export const attractionsData: Attraction[] = [
     fullDescription: "Perched high atop Bansdara mountain overlooking the entire city and surrounding Aravali range. Built by Maharana Sajjan Singh in 1884 as an astronomical centre and monsoon retreat to watch rain clouds roll across the plains. Famous for its golden sunset vantage points.",
     heroImage: "/images/sajjangarh.jpg",
     gallery: [
-      "/images/sajjangarh.jpg"
+      "/images/sajjangarh.jpg",
+      "/images/sajjangarh-hill.jpg"
     ],
     location: "Bansdara Peak, Sajjangarh Wildlife Sanctuary",
     estimatedDuration: "2 Hours",
@@ -276,9 +279,10 @@ export const attractionsData: Attraction[] = [
     category: "Heritage",
     shortDescription: "Vibrant historic stepped ghat on Pichola, central to Udaipur's religious festivities.",
     fullDescription: "The most iconic bathing and ceremonial ghat on the eastern shore of Lake Pichola, right behind Bagore Ki Haveli. Site of colourful festivities during the annual Gangaur and Mewar festivals, and a beloved backdrop for photographers throughout the year.",
-    heroImage: "/images/lake-pichola.jpg",
+    heroImage: "/images/gangaur-ghat.jpg",
     gallery: [
-      "/images/lake-pichola.jpg"
+      "/images/gangaur-ghat.jpg",
+      "/images/gangaur-ghat-view.jpg"
     ],
     location: "Old City, near Jagdish Chowk",
     estimatedDuration: "45 Minutes",
@@ -320,7 +324,8 @@ export const attractionsData: Attraction[] = [
     fullDescription: "Built by Maharana Raj Singh I in 1680 to counter devastating drought in village Badi. Unlike Pichola and Fateh Sagar, Badi Lake has no commercial buildings or shops along its pristine banks, making it a peaceful escape. The short 15-minute hike up Bahubali Peak yields one of the finest wild vistas in Rajasthan.",
     heroImage: "/images/badi-lake.jpg",
     gallery: [
-      "/images/badi-lake.jpg"
+      "/images/badi-lake.jpg",
+      "/images/bahubali-hill.jpg"
     ],
     location: "12 km West of Udaipur city",
     estimatedDuration: "2.5 Hours including drive",
@@ -339,9 +344,10 @@ export const attractionsData: Attraction[] = [
     category: "Lake",
     shortDescription: "A small picturesque lake adjacent to Pichola with musical rock gardens and sunset views.",
     fullDescription: "Located directly beside Lake Pichola near the southern foot of Machla Magra hill. Doodh Talai features the Manikya Lal Verma Garden and is the boarding station for the ropeway up to Karni Mata Temple.",
-    heroImage: "/images/lake-pichola.jpg",
+    heroImage: "/images/gangaur-ghat.jpg",
     gallery: [
-      "/images/lake-pichola.jpg"
+      "/images/gangaur-ghat.jpg",
+      "/images/gangaur-ghat-view.jpg"
     ],
     location: "Southern end of Pichola, Udaipur",
     estimatedDuration: "1 Hour",
@@ -360,9 +366,9 @@ export const attractionsData: Attraction[] = [
     category: "Viewpoint",
     shortDescription: "Scenic cable car ascent to Machla Magra hill for dramatic panoramic views of the lake basin.",
     fullDescription: "A modern cable car connecting Doodh Talai with the elevated Karni Mata shrine atop Machla Magra. The 5-minute ride glides over forested slopes, rewarding passengers with sweeping views across Lake Pichola, the City Palace, and Jag Mandir Island.",
-    heroImage: "/images/sajjangarh.jpg",
+    heroImage: "/images/karni-mata-ropeway.jpg",
     gallery: [
-      "/images/sajjangarh.jpg"
+      "/images/karni-mata-ropeway.jpg"
     ],
     location: "Doodh Talai, Udaipur",
     estimatedDuration: "1.5 Hours",
